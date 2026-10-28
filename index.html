@@ -37,6 +37,10 @@
   .card { background: var(--card); border-radius: 14px; padding: 14px 14px 12px; margin-bottom: 12px; }
   .row-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .name { font-size: 17px; font-weight: 700; }
+  .plan {
+    display: inline-block; font-size: 11px; font-weight: 600; color: var(--text);
+    background: var(--barbg); border-radius: 6px; padding: 2px 7px; margin-top: 4px;
+  }
   .age { font-size: 11px; color: var(--sub); font-weight: 400; margin-left: 6px; }
   .pct { font-size: 17px; font-weight: 700; white-space: nowrap; }
   .bar { height: 8px; border-radius: 4px; background: var(--barbg); margin: 8px 0 6px; overflow: hidden; }
@@ -127,6 +131,7 @@
         <span class="name">${isChild ? '└ ' : ''}${esc(r.name)}${a ? `<span class="age">${a}</span>` : ''}</span>
         <span class="pct">${right}</span>
       </div>
+      ${!isChild ? `<div class="plan">プラン: ${r.plan ? esc(r.plan) : '不明(1回使うと表示)'}</div>` : ''}
       <div class="bar">${fill}</div>
       <div class="detail">${detail}</div>
     </div>`;
