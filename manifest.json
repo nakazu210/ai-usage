@@ -1,0 +1,8 @@
+{
+  "name": "AI使用率",
+  "short_name": "AI使用率",
+  "display": "standalone",
+  "background_color": "#1F2328",
+  "theme_color": "#1F2328",
+  "icons": [{ "src": "icon.png", "sizes": "180x180", "type": "image/png" }]
+}
